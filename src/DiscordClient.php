@@ -20,9 +20,9 @@ use GuzzleHttp\Command\Guzzle\GuzzleClient;
 use GuzzleHttp\Command\Result;
 use GuzzleHttp\HandlerStack;
 use GuzzleHttp\Middleware;
-use Monolog\Logger;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Log\LoggerInterface;
+use Psr\Log\NullLogger;
 use RestCord\Logging\MessageFormatter;
 use RestCord\RateLimit\Provider\AbstractRateLimitProvider;
 use RestCord\RateLimit\Provider\MemoryRateLimitProvider;
@@ -40,6 +40,8 @@ use function GuzzleHttp\json_decode;
  * @property Interfaces\Gateway $gateway
  * @property Interfaces\Guild   $guild
  * @property Interfaces\Invite  $invite
+ * @property Interfaces\Interaction $interaction
+ * @property Interfaces\ApplicationCommand $applicationCommand
  * @property Interfaces\Oauth2  $oauth2
  * @property Interfaces\User    $user
  * @property Interfaces\Voice   $voice
@@ -139,12 +141,12 @@ class DiscordClient
      */
     private function validateOptions(array $options)
     {
-        $currentVersion = 6;
+        $currentVersion = 9;
         $resolver       = new OptionsResolver();
         $resolver->setDefaults(
             [
                 'version'           => $currentVersion,
-                'logger'            => new Logger('Logger'),
+                'logger'            => new NullLogger(),
                 'rateLimitProvider' => new MemoryRateLimitProvider(),
                 'throwOnRatelimit'  => false,
                 'apiUrl'            => "https://discord.com/api/v{$currentVersion}/",
