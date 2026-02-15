@@ -319,4 +319,12 @@ interface Guild {
 	 * @return array Returns the nick
 	 */
 	public function updateNick(array $options);
+
+	/**
+	 * @see https://discord.com/developers/docs/resources/guild#list-active-guild-threads
+	 *
+	 * @param array $options ['guild.id' => 'snowflake']
+	 * @return \GuzzleHttp\Command\Result Returns active threads object.
+	 */
+	public function listActiveGuildThreads(array $options);
 }

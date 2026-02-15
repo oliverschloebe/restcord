@@ -209,4 +209,92 @@ interface Channel {
 	 * @return array Returns a 204 empty response on success.
 	 */
 	public function triggerTypingIndicator(array $options);
+
+	/**
+	 * @see https://discord.com/developers/docs/resources/channel#start-thread-from-message
+	 *
+	 * @param array $options ['channel.id' => 'snowflake', 'message.id' => 'snowflake', 'name' => 'string', 'auto_archive_duration' => 'integer', 'rate_limit_per_user' => 'integer', 'reason' => 'string']
+	 * @return \GuzzleHttp\Command\Result Returns a channel object on success.
+	 */
+	public function startThreadFromMessage(array $options);
+
+	/**
+	 * @see https://discord.com/developers/docs/resources/channel#start-thread-without-message
+	 *
+	 * @param array $options ['channel.id' => 'snowflake', 'name' => 'string', 'auto_archive_duration' => 'integer', 'type' => 'integer', 'invitable' => 'boolean', 'rate_limit_per_user' => 'integer', 'reason' => 'string']
+	 * @return \GuzzleHttp\Command\Result Returns a channel object on success.
+	 */
+	public function startThreadWithoutMessage(array $options);
+
+	/**
+	 * @see https://discord.com/developers/docs/resources/channel#join-thread
+	 *
+	 * @param array $options ['channel.id' => 'snowflake']
+	 * @return \GuzzleHttp\Command\Result Returns a 204 empty response on success.
+	 */
+	public function joinThread(array $options);
+
+	/**
+	 * @see https://discord.com/developers/docs/resources/channel#leave-thread
+	 *
+	 * @param array $options ['channel.id' => 'snowflake']
+	 * @return \GuzzleHttp\Command\Result Returns a 204 empty response on success.
+	 */
+	public function leaveThread(array $options);
+
+	/**
+	 * @see https://discord.com/developers/docs/resources/channel#add-thread-member
+	 *
+	 * @param array $options ['channel.id' => 'snowflake', 'user.id' => 'snowflake']
+	 * @return \GuzzleHttp\Command\Result Returns a 204 empty response on success.
+	 */
+	public function addThreadMember(array $options);
+
+	/**
+	 * @see https://discord.com/developers/docs/resources/channel#remove-thread-member
+	 *
+	 * @param array $options ['channel.id' => 'snowflake', 'user.id' => 'snowflake']
+	 * @return \GuzzleHttp\Command\Result Returns a 204 empty response on success.
+	 */
+	public function removeThreadMember(array $options);
+
+	/**
+	 * @see https://discord.com/developers/docs/resources/channel#get-thread-member
+	 *
+	 * @param array $options ['channel.id' => 'snowflake', 'user.id' => 'snowflake', 'with_member' => 'boolean']
+	 * @return \GuzzleHttp\Command\Result Returns a thread member object.
+	 */
+	public function getThreadMember(array $options);
+
+	/**
+	 * @see https://discord.com/developers/docs/resources/channel#list-thread-members
+	 *
+	 * @param array $options ['channel.id' => 'snowflake', 'with_member' => 'boolean', 'limit' => 'integer', 'after' => 'snowflake']
+	 * @return \GuzzleHttp\Command\Result Returns an array of thread member objects.
+	 */
+	public function listThreadMembers(array $options);
+
+	/**
+	 * @see https://discord.com/developers/docs/resources/channel#list-public-archived-threads
+	 *
+	 * @param array $options ['channel.id' => 'snowflake', 'before' => 'ISO8601 timestamp', 'limit' => 'integer']
+	 * @return \GuzzleHttp\Command\Result Returns archived threads list.
+	 */
+	public function listPublicArchivedThreads(array $options);
+
+	/**
+	 * @see https://discord.com/developers/docs/resources/channel#list-private-archived-threads
+	 *
+	 * @param array $options ['channel.id' => 'snowflake', 'before' => 'ISO8601 timestamp', 'limit' => 'integer']
+	 * @return \GuzzleHttp\Command\Result Returns archived threads list.
+	 */
+	public function listPrivateArchivedThreads(array $options);
+
+	/**
+	 * @see https://discord.com/developers/docs/resources/channel#list-joined-private-archived-threads
+	 *
+	 * @param array $options ['channel.id' => 'snowflake', 'before' => 'snowflake', 'limit' => 'integer']
+	 * @return \GuzzleHttp\Command\Result Returns archived threads list.
+	 */
+	public function listJoinedPrivateArchivedThreads(array $options);
 }

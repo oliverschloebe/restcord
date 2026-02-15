@@ -40,6 +40,8 @@ use function GuzzleHttp\json_decode;
  * @property Interfaces\Gateway $gateway
  * @property Interfaces\Guild   $guild
  * @property Interfaces\Invite  $invite
+ * @property Interfaces\Interaction $interaction
+ * @property Interfaces\ApplicationCommand $applicationCommand
  * @property Interfaces\Oauth2  $oauth2
  * @property Interfaces\User    $user
  * @property Interfaces\Voice   $voice
@@ -139,7 +141,7 @@ class DiscordClient
      */
     private function validateOptions(array $options)
     {
-        $currentVersion = 6;
+        $currentVersion = 9;
         $resolver       = new OptionsResolver();
         $resolver->setDefaults(
             [
