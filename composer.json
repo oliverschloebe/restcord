@@ -1,5 +1,5 @@
 {
-    "name":         "restcord/restcord",
+    "name":         "oliverschloebe/restcord",
     "description":  "REST Library for the Discord API",
     "type":         "library",
     "require":      {
@@ -26,6 +26,10 @@
         {
             "name":  "Aaron Scherer",
             "email": "aequasi@gmail.com"
+        },
+        {
+            "name":  "Oliver Schlöbe",
+            "email": "info@schloebe.de"
         }
     ],
     "require-dev":  {
