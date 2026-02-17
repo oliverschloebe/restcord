@@ -23,6 +23,8 @@ channel.id | snowflake | true | *null*
 message.id | snowflake | true | *null*
 content | string | false | *null*
 embed | object | false | *null*
+components | array | false | *null*
+allowed_mentions | object | false | *null*
 
 ## Response
 

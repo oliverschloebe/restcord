@@ -54,6 +54,13 @@ class Message {
 	public $channel_id;
 
 	/**
+	 * message components
+	 *
+	 * @var array|null
+	 */
+	public $components;
+
+	/**
 	 * contents of the message
 	 *
 	 * @var string
@@ -157,6 +164,13 @@ class Message {
 	 * @var string|null
 	 */
 	public $party_id;
+
+	/**
+	 * message flags
+	 *
+	 * @var int|null
+	 */
+	public $flags;
 
 	/**
 	 * whether this message is pinned
