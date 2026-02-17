@@ -26,6 +26,9 @@ tts | boolean | false | *null*
 file | file contents | false | *null*
 embed | object | false | *null*
 payload_json | string | false | *null*
+components | array | false | *null*
+allowed_mentions | object | false | *null*
+flags | integer | false | *null*
 
 ## Response
 

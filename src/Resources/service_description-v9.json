@@ -4742,6 +4742,16 @@
                         "location": "json",
                         "type": "string",
                         "description": "name of the application"
+                    },
+                    "components?": {
+                        "location": "json",
+                        "type": "array",
+                        "description": "message components"
+                    },
+                    "flags?": {
+                        "location": "json",
+                        "type": "integer",
+                        "description": "message flags"
                     }
                 }
             },

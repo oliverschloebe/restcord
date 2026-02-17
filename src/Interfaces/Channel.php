@@ -45,7 +45,7 @@ interface Channel {
 	/**
 	 * @see https://discordapp.com/developers/docs/resources/channel#create-message
 	 *
-	 * @param array $options ['channel.id' => 'snowflake', 'content' => 'string', 'nonce' => 'snowflake', 'tts' => 'boolean', 'file' => 'file contents', 'embed' => 'object', 'payload_json' => 'string']
+	 * @param array $options ['channel.id' => 'snowflake', 'content' => 'string', 'nonce' => 'snowflake', 'tts' => 'boolean', 'file' => 'file contents', 'embed' => 'object', 'payload_json' => 'string', 'components' => 'array', 'allowed_mentions' => 'object', 'flags' => 'integer']
 	 * @return array
 	 */
 	public function createMessage(array $options);
@@ -125,7 +125,7 @@ interface Channel {
 	/**
 	 * @see https://discordapp.com/developers/docs/resources/channel#edit-message
 	 *
-	 * @param array $options ['channel.id' => 'snowflake', 'message.id' => 'snowflake', 'content' => 'string', 'embed' => 'object']
+	 * @param array $options ['channel.id' => 'snowflake', 'message.id' => 'snowflake', 'content' => 'string', 'embed' => 'object', 'components' => 'array', 'allowed_mentions' => 'object']
 	 * @return \RestCord\Model\Channel\Message Returns a message object.
 	 */
 	public function editMessage(array $options);

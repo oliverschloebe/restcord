@@ -26,4 +26,11 @@ class Constants
     const DEFAULT_AVATAR_URL = self::CDN_URL.'embed/avatars/';
     const GUILD_ICON_URL     = self::CDN_URL.'icons/';
     const GUILD_SPLASH_URL   = self::CDN_URL.'splashes/';
+
+    /**
+     * Message flag for enabling Components V2 rendering.
+     *
+     * @see https://docs.discord.com/developers/components/overview
+     */
+    const IS_COMPONENTS_V2 = 1 << 15;
 }
