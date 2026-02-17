@@ -261,7 +261,7 @@ class DiscordClient
 
         if ($array) {
             return array_map(
-                fn($item) => $mapper->map($item, new $class()),
+                fn(mixed $item): object => $mapper->map($item, new $class()),
                 $data
             );
         }
