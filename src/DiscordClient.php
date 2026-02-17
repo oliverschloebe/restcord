@@ -29,8 +29,6 @@ use RestCord\RateLimit\Provider\MemoryRateLimitProvider;
 use RestCord\RateLimit\RateLimiter;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
-use function GuzzleHttp\json_decode;
-
 /**
  * @author Aaron Scherer <aequasi@gmail.com>
  *
@@ -174,7 +172,7 @@ class DiscordClient
      */
     private function buildDescriptions(Client $client)
     {
-        $description = \GuzzleHttp\json_decode(
+        $description = \GuzzleHttp\Utils::jsonDecode(
             file_get_contents(__DIR__.'/Resources/service_description-v'.$this->options['version'].'.json'),
             true
         );
@@ -226,9 +224,9 @@ class DiscordClient
                     $content = '{}';
                 }
 
-                return new Result(json_decode($content, true));
+                return new Result(\GuzzleHttp\Utils::jsonDecode($content, true));
             } catch (\Exception $e) {
-                dump($response->getBody()->__toString());
+                var_dump($response->getBody()->__toString());
 
                 throw $e;
             }
@@ -237,7 +235,7 @@ class DiscordClient
         // attempt to deserialize into JSON only if there is a content in the response
         $data = null;
         if ($response->getStatusCode() !== 204) {
-            $data = json_decode($response->getBody()->__toString());
+            $data = \GuzzleHttp\Utils::jsonDecode($response->getBody()->__toString());
         }
 
         list($responseType, $array) = $this->getResponseType($command->getName(), $operation);
@@ -263,9 +261,7 @@ class DiscordClient
 
         if ($array) {
             return array_map(
-                function ($item) use ($class, $mapper) {
-                    return $mapper->map($item, new $class());
-                },
+                fn($item) => $mapper->map($item, new $class()),
                 $data
             );
         }
