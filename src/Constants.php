@@ -69,4 +69,16 @@ class Constants
     const COMPONENT_RADIO_GROUP    = 21;
     const COMPONENT_CHECKBOX_GROUP = 22;
     const COMPONENT_CHECKBOX       = 23;
+
+    /**
+     * Button style constants.
+     *
+     * @see https://docs.discord.com/developers/components/reference#button-button-styles
+     */
+    const BUTTON_PRIMARY   = 1;
+    const BUTTON_SECONDARY = 2;
+    const BUTTON_SUCCESS   = 3;
+    const BUTTON_DANGER    = 4;
+    const BUTTON_LINK      = 5;
+    const BUTTON_PREMIUM   = 6;
 }
