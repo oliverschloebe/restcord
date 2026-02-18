@@ -1,13 +1,11 @@
 preset: recommended
 
-risky: true
-
-linting: true
-
 enabled:
   - strict
   - align_equals
   - newline_after_open_tag
+  - long_array_syntax
+  - unalign_double_arrow
 
 disabled:
   - unalign_equals
