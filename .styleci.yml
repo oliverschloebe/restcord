@@ -1,5 +1,7 @@
 preset: recommended
 
+risky: true
+
 enabled:
   - strict
   - align_equals
