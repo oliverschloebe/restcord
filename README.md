@@ -13,10 +13,6 @@ If you are doing anything heavy, or fancy, you should probably look at [DiscordP
 
 Documentation can be found [here](https://www.restcord.com/).
 
-### Wrappers
-
-* [Laravel](https://gitlab.com/more-cores/laravel-restcord)
-
 
 [1]: https://github.com/teamreflex/DiscordPHP
 [2]: https://github.com/laravel-discord/Yasmin
