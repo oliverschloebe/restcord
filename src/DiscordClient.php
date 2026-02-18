@@ -34,17 +34,17 @@ use Symfony\Component\OptionsResolver\OptionsResolver;
  *
  * Client Class
  *
- * @property Interfaces\Channel $channel
- * @property Interfaces\Gateway $gateway
- * @property Interfaces\Guild   $guild
- * @property Interfaces\Invite  $invite
- * @property Interfaces\Interaction $interaction
+ * @property Interfaces\Channel            $channel
+ * @property Interfaces\Gateway            $gateway
+ * @property Interfaces\Guild              $guild
+ * @property Interfaces\Invite             $invite
+ * @property Interfaces\Interaction        $interaction
  * @property Interfaces\ApplicationCommand $applicationCommand
- * @property Interfaces\Oauth2  $oauth2
- * @property Interfaces\User    $user
- * @property Interfaces\Voice   $voice
- * @property Interfaces\Webhook $webhook
- * @property Interfaces\Emoji   $emoji
+ * @property Interfaces\Oauth2             $oauth2
+ * @property Interfaces\User               $user
+ * @property Interfaces\Voice              $voice
+ * @property Interfaces\Webhook            $webhook
+ * @property Interfaces\Emoji              $emoji
  */
 class DiscordClient
 {
@@ -229,11 +229,11 @@ class DiscordClient
                 if ($command->getName() === 'listActiveGuildThreads') {
                     return new Result([
                         'threads' => array_map(
-                            fn(array $item): Model\Thread\Thread => new Model\Thread\Thread($item),
+                            fn (array $item): Model\Thread\Thread => new Model\Thread\Thread($item),
                             $data['threads'] ?? []
                         ),
                         'members' => array_map(
-                            fn(array $item): Model\Thread\Member => new Model\Thread\Member($item),
+                            fn (array $item): Model\Thread\Member => new Model\Thread\Member($item),
                             $data['members'] ?? []
                         ),
                     ]);
@@ -276,7 +276,7 @@ class DiscordClient
 
         if ($array) {
             return array_map(
-                fn(mixed $item): object => $mapper->map($item, new $class()),
+                fn (mixed $item): object => $mapper->map($item, new $class()),
                 $data
             );
         }

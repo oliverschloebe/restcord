@@ -18,8 +18,8 @@ use GuzzleHttp\Handler\MockHandler;
 use GuzzleHttp\Psr7\Response;
 use PHPUnit\Framework\TestCase;
 use RestCord\DiscordClient;
-use RestCord\Model\Thread\Thread;
 use RestCord\Model\Thread\Member;
+use RestCord\Model\Thread\Thread;
 
 class ListActiveGuildThreadsTest extends TestCase
 {
@@ -28,51 +28,51 @@ class ListActiveGuildThreadsTest extends TestCase
         $responseBody = json_encode([
             'threads' => [
                 [
-                    'id' => 1468665862922965146,
-                    'type' => 11,
-                    'last_message_id' => 1473011515559907431,
-                    'flags' => 0,
-                    'guild_id' => 1274992373612679219,
-                    'name' => 'Sweet/Vicious',
-                    'parent_id' => 1412704496017997874,
+                    'id'                  => 1468665862922965146,
+                    'type'                => 11,
+                    'last_message_id'     => 1473011515559907431,
+                    'flags'               => 0,
+                    'guild_id'            => 1274992373612679219,
+                    'name'                => 'Sweet/Vicious',
+                    'parent_id'           => 1412704496017997874,
                     'rate_limit_per_user' => 0,
-                    'bitrate' => 64000,
-                    'user_limit' => 0,
-                    'rtc_region' => null,
-                    'owner_id' => 960862862618800129,
-                    'thread_metadata' => [
-                        'archived' => false,
-                        'archive_timestamp' => '2026-02-04T17:53:48.213000+00:00',
+                    'bitrate'             => 64000,
+                    'user_limit'          => 0,
+                    'rtc_region'          => null,
+                    'owner_id'            => 960862862618800129,
+                    'thread_metadata'     => [
+                        'archived'              => false,
+                        'archive_timestamp'     => '2026-02-04T17:53:48.213000+00:00',
                         'auto_archive_duration' => 10080,
-                        'locked' => false,
-                        'create_timestamp' => '2026-02-04T17:53:48.213000+00:00',
+                        'locked'                => false,
+                        'create_timestamp'      => '2026-02-04T17:53:48.213000+00:00',
                     ],
-                    'message_count' => 347,
-                    'member_count' => 7,
+                    'message_count'      => 347,
+                    'member_count'       => 7,
                     'total_message_sent' => 348,
                 ],
                 [
-                    'id' => 1463445161668247656,
+                    'id'   => 1463445161668247656,
                     'type' => 11,
                     'name' => 'A Night of the Seven Kingdoms',
                 ],
             ],
             'members' => [
                 [
-                    'id' => 1279037614053265430,
-                    'user_id' => 1277616012908302356,
+                    'id'             => 1279037614053265430,
+                    'user_id'        => 1277616012908302356,
                     'join_timestamp' => '2025-05-01T13:55:03.174000+00:00',
-                    'flags' => 1,
-                    'muted' => null,
-                    'mute_config' => null,
+                    'flags'          => 1,
+                    'muted'          => null,
+                    'mute_config'    => null,
                 ],
                 [
-                    'id' => 1275043236632727643,
-                    'user_id' => 1277616012908302356,
+                    'id'             => 1275043236632727643,
+                    'user_id'        => 1277616012908302356,
                     'join_timestamp' => '2026-02-17T16:15:13.911000+00:00',
-                    'flags' => 1,
-                    'muted' => null,
-                    'mute_config' => null,
+                    'flags'          => 1,
+                    'muted'          => null,
+                    'mute_config'    => null,
                 ],
             ],
         ]);
@@ -82,7 +82,7 @@ class ListActiveGuildThreadsTest extends TestCase
         ]);
 
         $client = new DiscordClient([
-            'token' => 'fake-token',
+            'token'         => 'fake-token',
             'guzzleOptions' => [
                 'handler' => $mock,
             ],
@@ -132,7 +132,7 @@ class ListActiveGuildThreadsTest extends TestCase
         ]);
 
         $client = new DiscordClient([
-            'token' => 'fake-token',
+            'token'         => 'fake-token',
             'guzzleOptions' => [
                 'handler' => $mock,
             ],

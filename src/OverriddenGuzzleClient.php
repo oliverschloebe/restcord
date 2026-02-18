@@ -56,7 +56,7 @@ class OverriddenGuzzleClient extends GuzzleClient
     public function __construct(
         ClientInterface $client,
         DescriptionInterface $description,
-        callable $responseToResultTransformer = null,
+        ?callable $responseToResultTransformer,
         $category
     ) {
         parent::__construct($client, $description, null, $responseToResultTransformer);

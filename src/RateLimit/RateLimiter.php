@@ -53,7 +53,7 @@ class RateLimiter
      * @param array                   $options
      * @param LoggerInterface         $logger
      */
-    public function __construct(AbstractRateLimitProvider $provider, array $options, LoggerInterface $logger = null)
+    public function __construct(AbstractRateLimitProvider $provider, array $options, ?LoggerInterface $logger = null)
     {
         $this->provider = $provider;
         $this->options  = $options;
