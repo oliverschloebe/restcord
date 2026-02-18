@@ -7,7 +7,7 @@ jobs:
         type: string
     docker:
       - image: cimg/php:<< parameters.php-version >>
-      - image: cimg/redis:7.2
+      - image: cimg/redis:8.4
     steps:
       - checkout
 
