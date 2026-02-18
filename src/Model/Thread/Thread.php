@@ -42,7 +42,7 @@ class Thread {
 	/**
 	 * channel flags combined as a bitfield
 	 *
-	 * @var int|null
+	 * @var int
 	 */
 	public $flags;
 
