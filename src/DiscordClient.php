@@ -224,7 +224,22 @@ class DiscordClient
                     $content = '{}';
                 }
 
-                return new Result(\GuzzleHttp\Utils::jsonDecode($content, true));
+                $data = \GuzzleHttp\Utils::jsonDecode($content, true);
+
+                if ($command->getName() === 'listActiveGuildThreads') {
+                    return new Result([
+                        'threads' => array_map(
+                            fn(array $item): Model\Thread\Thread => new Model\Thread\Thread($item),
+                            $data['threads'] ?? []
+                        ),
+                        'members' => array_map(
+                            fn(array $item): Model\Thread\Member => new Model\Thread\Member($item),
+                            $data['members'] ?? []
+                        ),
+                    ]);
+                }
+
+                return new Result($data);
             } catch (\Exception $e) {
                 var_dump($response->getBody()->__toString());
 
