@@ -65,10 +65,10 @@ class ListActiveGuildThreadsTest extends TestCase
         $this->assertCount(2, $result['members']);
         $this->assertInstanceOf(GuildMember::class, $result['members'][0]);
         $this->assertInstanceOf(GuildMember::class, $result['members'][1]);
-        $this->assertEquals(false, $result['members'][0]->deaf);
+        $this->assertFalse($result['members'][0]->deaf);
         $this->assertEquals('user1', $result['members'][0]->nick);
-        $this->assertEquals(true, $result['members'][1]->deaf);
-        $this->assertEquals(true, $result['members'][1]->mute);
+        $this->assertTrue($result['members'][1]->deaf);
+        $this->assertTrue($result['members'][1]->mute);
     }
 
     public function testListActiveGuildThreadsHandlesEmptyResponse()
