@@ -324,7 +324,7 @@ interface Guild {
 	 * @see https://discord.com/developers/docs/resources/guild#list-active-guild-threads
 	 *
 	 * @param array $options ['guild.id' => 'snowflake']
-	 * @return \GuzzleHttp\Command\Result Returns active threads object.
+	 * @return \GuzzleHttp\Command\Result Returns active threads object with 'threads' as \RestCord\Model\Channel\Channel[] and 'members' as \RestCord\Model\Guild\GuildMember[].
 	 */
 	public function listActiveGuildThreads(array $options);
 }
