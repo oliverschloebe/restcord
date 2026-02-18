@@ -7,12 +7,9 @@ What is this?
 ------------
 
 This is a PHP library for the Discord API v9. This library is limited to the basic REST api that Discord provides.
-If you are doing anything heavy, or fancy, you should probably look at [DiscordPHP][1] or [Yasmin][2].
+
+*If you are doing anything heavy, or fancy, you should probably look at [DiscordPHP](https://github.com/discord-php/DiscordPHP).*
 
 ## [Documentation](https://www.restcord.com/)
 
 Documentation can be found [here](https://www.restcord.com/).
-
-
-[1]: https://github.com/teamreflex/DiscordPHP
-[2]: https://github.com/laravel-discord/Yasmin
