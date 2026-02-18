@@ -229,11 +229,11 @@ class DiscordClient
                 if ($command->getName() === 'listActiveGuildThreads') {
                     return new Result([
                         'threads' => array_map(
-                            fn(array $item): Model\Channel\Channel => new Model\Channel\Channel($item),
+                            fn(array $item): Model\Thread\Thread => new Model\Thread\Thread($item),
                             $data['threads'] ?? []
                         ),
                         'members' => array_map(
-                            fn(array $item): Model\Guild\GuildMember => new Model\Guild\GuildMember($item),
+                            fn(array $item): Model\Thread\Member => new Model\Thread\Member($item),
                             $data['members'] ?? []
                         ),
                     ]);

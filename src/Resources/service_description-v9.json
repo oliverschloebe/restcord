@@ -5632,6 +5632,152 @@
                     }
                 }
             }
+        },
+        "thread": {
+            "thread": {
+                "link": "https://discord.com/developers/docs/resources/channel#thread-object",
+                "resource": "thread",
+                "description": "",
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "location": "json",
+                        "type": "snowflake",
+                        "description": "the id of this thread"
+                    },
+                    "type": {
+                        "location": "json",
+                        "type": "integer",
+                        "description": "the type of thread"
+                    },
+                    "last_message_id": {
+                        "location": "json",
+                        "type": "snowflake",
+                        "nullable": true,
+                        "description": "the id of the last message sent in this thread"
+                    },
+                    "flags": {
+                        "location": "json",
+                        "type": "integer",
+                        "description": "channel flags combined as a bitfield"
+                    },
+                    "guild_id": {
+                        "location": "json",
+                        "type": "snowflake",
+                        "nullable": true,
+                        "description": "the id of the guild"
+                    },
+                    "name": {
+                        "location": "json",
+                        "type": "string",
+                        "nullable": true,
+                        "description": "the name of the thread"
+                    },
+                    "parent_id": {
+                        "location": "json",
+                        "type": "snowflake",
+                        "nullable": true,
+                        "description": "id of the parent channel"
+                    },
+                    "rate_limit_per_user": {
+                        "location": "json",
+                        "type": "integer",
+                        "nullable": true,
+                        "description": "amount of seconds a user has to wait before sending another message"
+                    },
+                    "bitrate": {
+                        "location": "json",
+                        "type": "integer",
+                        "nullable": true,
+                        "description": "the bitrate (in bits) of the voice channel"
+                    },
+                    "user_limit": {
+                        "location": "json",
+                        "type": "integer",
+                        "nullable": true,
+                        "description": "the user limit of the voice channel"
+                    },
+                    "rtc_region": {
+                        "location": "json",
+                        "type": "string",
+                        "nullable": true,
+                        "description": "voice region id for the voice channel"
+                    },
+                    "owner_id": {
+                        "location": "json",
+                        "type": "snowflake",
+                        "nullable": true,
+                        "description": "id of the thread creator"
+                    },
+                    "thread_metadata": {
+                        "location": "json",
+                        "type": "object",
+                        "nullable": true,
+                        "description": "thread-specific fields not needed by other channels"
+                    },
+                    "message_count": {
+                        "location": "json",
+                        "type": "integer",
+                        "nullable": true,
+                        "description": "number of messages in a thread"
+                    },
+                    "member_count": {
+                        "location": "json",
+                        "type": "integer",
+                        "nullable": true,
+                        "description": "an approximate count of the number of members in the thread"
+                    },
+                    "total_message_sent": {
+                        "location": "json",
+                        "type": "integer",
+                        "nullable": true,
+                        "description": "number of messages ever sent in a thread"
+                    }
+                }
+            },
+            "member": {
+                "link": "https://discord.com/developers/docs/resources/channel#thread-member-object",
+                "resource": "thread",
+                "description": "",
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "location": "json",
+                        "type": "snowflake",
+                        "nullable": true,
+                        "description": "id of the thread"
+                    },
+                    "user_id": {
+                        "location": "json",
+                        "type": "snowflake",
+                        "nullable": true,
+                        "description": "id of the user"
+                    },
+                    "join_timestamp": {
+                        "location": "json",
+                        "type": "string",
+                        "nullable": true,
+                        "description": "the time the current user last joined the thread"
+                    },
+                    "flags": {
+                        "location": "json",
+                        "type": "integer",
+                        "description": "any user-thread settings, currently only used for notifications"
+                    },
+                    "muted": {
+                        "location": "json",
+                        "type": "boolean",
+                        "nullable": true,
+                        "description": "whether the thread is muted"
+                    },
+                    "mute_config": {
+                        "location": "json",
+                        "type": "object",
+                        "nullable": true,
+                        "description": "mute configuration"
+                    }
+                }
+            }
         }
     }
 }
