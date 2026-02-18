@@ -8,7 +8,7 @@
         "guzzlehttp/guzzle-services": "^1.0",
         "monolog/monolog":            "^3.6",
         "netresearch/jsonmapper":     "^1.4",
-        "symfony/options-resolver":   "^3.4|^4.4|^5.1|^6.0",
+        "symfony/options-resolver":   "^3.4|^4.4|^5.1|^6.2",
         "psr/log": "^2.0|^3.0"
     },
     "autoload":     {
