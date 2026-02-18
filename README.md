@@ -1,7 +1,7 @@
 RestCord - PHP 8.x / Discord API v9 Edition
 ======================
 
-[![GitHub release](https://img.shields.io/github/release/oliverschloebe/restcord.svg)](https://www.github.com/oliverschloebe/restcord) [![Discord Chat](https://img.shields.io/badge/chat-Discord%20API-blue.svg)](https://discord.gg/khC2PP8) [![StyleCI](https://styleci.io/repos/1156312612/shield?branch=main)](https://styleci.io/repos/1156312612)
+[![GitHub release](https://img.shields.io/github/release/oliverschloebe/restcord.svg)](https://www.github.com/oliverschloebe/restcord) [![Discord Chat](https://img.shields.io/badge/chat-Discord%20API-blue.svg)](https://discord.gg/khC2PP8) [![StyleCI](https://styleci.io/repos/1156312612/shield?branch=main)](https://styleci.io/repos/1156312612) [![CircleCI](https://dl.circleci.com/status-badge/img/gh/oliverschloebe/restcord/tree/main.svg?style=svg)](https://dl.circleci.com/status-badge/redirect/gh/oliverschloebe/restcord/tree/main)
 
 What is this?
 ------------
