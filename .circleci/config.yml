@@ -1,0 +1,50 @@
+version: 2.1
+
+jobs:
+  test:
+    parameters:
+      php-version:
+        type: string
+    docker:
+      - image: cimg/php:<< parameters.php-version >>
+      - image: cimg/redis:7.2
+    steps:
+      - checkout
+
+      - run:
+          name: Install Redis PHP extension
+          command: |
+            yes '' | sudo pecl install redis
+            echo 'extension=redis.so' | sudo tee /usr/local/etc/php/conf.d/redis.ini
+
+      - run:
+          name: Install Composer dependencies
+          command: composer install
+
+      - run:
+          name: Lint
+          command: ./bin/lint src
+
+      - run:
+          name: PHPUnit
+          command: ./vendor/bin/phpunit --bootstrap vendor/autoload.php tests
+
+      - run:
+          name: Functional tests (with retry)
+          command: |
+            php ./bin/stupidFunctionalTest.php "$token" "$guild_id" "$channel_id" || \
+            (sleep 5 && php ./bin/stupidFunctionalTest.php "$token" "$guild_id" "$channel_id")
+
+workflows:
+  build-and-test:
+    jobs:
+      - test:
+          matrix:
+            parameters:
+              php-version:
+                - "8.0"
+                - "8.1"
+                - "8.2"
+                - "8.3"
+                - "8.4"
+                - "8.5"
