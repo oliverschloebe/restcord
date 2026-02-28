@@ -241,8 +241,6 @@ class DiscordClient
 
                 return new Result($data);
             } catch (\Exception $e) {
-                var_dump($response->getBody()->__toString());
-
                 throw $e;
             }
         }
