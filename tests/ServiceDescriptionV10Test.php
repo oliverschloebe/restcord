@@ -18,7 +18,7 @@ use PHPUnit\Framework\TestCase;
 use RestCord\DiscordClient;
 
 /**
- * ServiceDescriptionV10Test Class
+ * ServiceDescriptionV10Test Class.
  *
  * Tests for Discord API v10 compatibility in service_description-v10.json
  */
@@ -55,7 +55,7 @@ class ServiceDescriptionV10Test extends TestCase
 
     /**
      * Test that v10-specific changes are present
-     * Key change in v10: embed (singular) changed to embeds (plural) for messages
+     * Key change in v10: embed (singular) changed to embeds (plural) for messages.
      */
     public function testV10EmbedsParameter()
     {
@@ -73,7 +73,7 @@ class ServiceDescriptionV10Test extends TestCase
     }
 
     /**
-     * Test that v9-specific operations still exist in v10
+     * Test that v9-specific operations still exist in v10.
      */
     public function testV9OperationsExistInV10()
     {
@@ -83,7 +83,7 @@ class ServiceDescriptionV10Test extends TestCase
     }
 
     /**
-     * Test that all operation resources map to valid PHP interfaces and methods
+     * Test that all operation resources map to valid PHP interfaces and methods.
      */
     public function testOperationResources()
     {
@@ -133,7 +133,7 @@ class ServiceDescriptionV10Test extends TestCase
     }
 
     /**
-     * Test that all model resources map to valid PHP model classes
+     * Test that all model resources map to valid PHP model classes.
      */
     public function testModels()
     {
@@ -154,7 +154,7 @@ class ServiceDescriptionV10Test extends TestCase
     }
 
     /**
-     * Test that critical Discord API v10 operations are present
+     * Test that critical Discord API v10 operations are present.
      */
     public function testCriticalV10Operations()
     {
@@ -178,7 +178,7 @@ class ServiceDescriptionV10Test extends TestCase
     }
 
     /**
-     * Test that webhook operations contain embeds parameter (plural)
+     * Test that webhook operations contain embeds parameter (plural).
      */
     public function testWebhookEmbedsParameter()
     {
