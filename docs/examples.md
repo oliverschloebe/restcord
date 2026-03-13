@@ -48,7 +48,7 @@ var_dump(
  }
  
  foo(1);```",
-         'embed'      => [
+         'embeds'      => [[
              "title" => "title ~~(did you know you can have markdown here too?)~~",
              "description" => "this supports [named links](https://discordapp.com) on top of the previously shown subset of markdown. ```\nyes, even code blocks```",
              "url" => "https://discordapp.com",
@@ -88,7 +88,7 @@ var_dump(
                  ]
              ]
          ]
-     ])
+     ]])
  );
 ```
 
