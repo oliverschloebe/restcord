@@ -6,7 +6,7 @@ RestCord - PHP 8.x / Discord API v10 Edition
 What is this?
 ------------
 
-This is a PHP library for the Discord API v9. This library is limited to the basic REST api that Discord provides.
+This is a PHP library for the Discord API v10. This library is limited to the basic REST api that Discord provides.
 
 *If you are doing anything heavy, or fancy, you should probably look at [DiscordPHP](https://github.com/discord-php/DiscordPHP).*
 
