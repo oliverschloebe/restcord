@@ -10,6 +10,23 @@ This is a PHP library for the Discord API v10. This library is limited to the ba
 
 *If you are doing anything heavy, or fancy, you should probably look at [DiscordPHP](https://github.com/discord-php/DiscordPHP).*
 
+Installation
+------------
+
+Use [Composer] to install the package:
+
+```bash
+composer require oliverschloebe/restcord
+```
+
 ## [Documentation](https://www.restcord.com/)
 
 Documentation can be found [here](https://www.restcord.com/).
+
+License
+-------
+
+All contents of this package are licensed under the [MIT license].
+
+[Composer]: https://getcomposer.org
+[MIT license]: LICENSE
