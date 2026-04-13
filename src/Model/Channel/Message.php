@@ -217,7 +217,49 @@ class Message {
 	/**
 	 * @param array $content
 	 */
-	public function __construct(array $content = null) {
+
+	/**
+	 * sent if the message contains stickers
+	 * @var array|null
+	 */
+	public $sticker_items;
+
+	/**
+	 * the message associated with the message_reference (reply target)
+	 * @var array|null
+	 */
+	public $referenced_message;
+
+	/**
+	 * forwarded messages
+	 * @var array|null
+	 */
+	public $message_snapshots;
+
+	/**
+	 * sent if the message is a result of an interaction
+	 * @var array|null
+	 */
+	public $interaction_metadata;
+
+	/**
+	 * a poll object if the message contains a poll
+	 * @var array|null
+	 */
+	public $poll;
+
+	/**
+	 * the thread started from this message
+	 * @var array|null
+	 */
+	public $thread;
+
+	/**
+	 * channels specifically mentioned in this message
+	 * @var array|null
+	 */
+	public $mention_channels;
+	/* public function __construct(array $content = null) {
 		if (null === $content) {
 		    return;
 		}
@@ -228,5 +270,16 @@ class Message {
 		        $this->{$key} = $value;
 		    }
 		}
-	}
+	} */
+	public function __construct(array $content = null) {
+    if (null === $content) {
+        return;
+    }
+
+    foreach ($content as $key => $value) {
+        if (property_exists($this, $key)) {
+            $this->{$key} = $value;
+        }
+    }
+}
 }
