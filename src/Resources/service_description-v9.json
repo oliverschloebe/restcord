@@ -2175,6 +2175,53 @@
                 },
                 "parametersArray": false
             },
+            "startThreadInForumOrMediaChannel": {
+                "link": "https://discord.com/developers/docs/resources/channel#start-thread-in-forum-or-media-channel",
+                "resource": "channel",
+                "name": "Start Thread in Forum or Media Channel",
+                "method": "POST",
+                "url": "/channels/{channel.id}/threads",
+                "description": "Creates a new thread in a forum or media channel.",
+                "responseNote": "Returns a channel object on success.",
+                "parameters": {
+                    "channel.id": {
+                        "type": "snowflake",
+                        "location": "uri",
+                        "required": true
+                    },
+                    "name": {
+                        "location": "json",
+                        "type": "string",
+                        "required": true
+                    },
+                    "auto_archive_duration": {
+                        "location": "json",
+                        "type": "integer"
+                    },
+                    "rate_limit_per_user": {
+                        "location": "json",
+                        "type": "integer"
+                    },
+                    "message": {
+                        "location": "json",
+                        "type": "array",
+                        "required": true
+                    },
+                    "applied_tags": {
+                        "location": "json",
+                        "type": "array"
+                    },
+                    "flags": {
+                        "location": "json",
+                        "type": "integer"
+                    },
+                    "reason": {
+                        "location": "header",
+                        "type": "string"
+                    }
+                },
+                "parametersArray": false
+            },
             "joinThread": {
                 "link": "https://discord.com/developers/docs/resources/channel#join-thread",
                 "resource": "channel",

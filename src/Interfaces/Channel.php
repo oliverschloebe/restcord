@@ -227,6 +227,14 @@ interface Channel {
 	public function startThreadWithoutMessage(array $options);
 
 	/**
+	 * @see https://discord.com/developers/docs/resources/channel#start-thread-in-forum-or-media-channel
+	 *
+	 * @param array $options ['channel.id' => 'snowflake', 'name' => 'string', 'auto_archive_duration' => 'integer', 'rate_limit_per_user' => 'integer', 'message' => 'array', 'applied_tags' => 'array', 'flags' => 'integer', 'reason' => 'string']
+	 * @return \GuzzleHttp\Command\Result Returns a channel object on success.
+	 */
+	public function startThreadInForumOrMediaChannel(array $options);
+
+	/**
 	 * @see https://discord.com/developers/docs/resources/channel#join-thread
 	 *
 	 * @param array $options ['channel.id' => 'snowflake']

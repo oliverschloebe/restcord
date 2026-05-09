@@ -56,6 +56,7 @@ class ServiceDescriptionTest extends TestCase
     public function testNewV9OperationsExist()
     {
         $this->assertArrayHasKey('startThreadFromMessage', $this->description['operations']['channel']);
+        $this->assertArrayHasKey('startThreadInForumOrMediaChannel', $this->description['operations']['channel']);
         $this->assertArrayHasKey('createInteractionResponse', $this->description['operations']['interaction']);
         $this->assertArrayHasKey('getGlobalApplicationCommands', $this->description['operations']['application-command']);
     }
