@@ -4752,6 +4752,42 @@
                         "location": "json",
                         "type": "integer",
                         "description": "message flags"
+                    },
+                    "sticker_items?": {
+                        "location": "json",
+                        "type": "array",
+                        "description": "sent if the message contains stickers"
+                    },
+                    "referenced_message?": {
+                        "location": "json",
+                        "type": "object",
+                        "nullable": true,
+                        "description": "the message associated with the message_reference (reply target)"
+                    },
+                    "message_snapshots?": {
+                        "location": "json",
+                        "type": "array",
+                        "description": "the message associated with the message_reference (forwarded messages)"
+                    },
+                    "interaction_metadata?": {
+                        "location": "json",
+                        "type": "object",
+                        "description": "sent if the message is sent as a result of an interaction"
+                    },
+                    "thread?": {
+                        "location": "json",
+                        "type": "object",
+                        "description": "the thread that was started from this message"
+                    },
+                    "mention_channels?": {
+                        "location": "json",
+                        "type": "array",
+                        "description": "channels specifically mentioned in this message"
+                    },
+                    "poll?": {
+                        "location": "json",
+                        "type": "object",
+                        "description": "a poll object if the message contains a poll"
                     }
                 }
             },
