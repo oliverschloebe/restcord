@@ -78,8 +78,21 @@ class ServiceDescriptionV10Test extends TestCase
     public function testV9OperationsExistInV10()
     {
         $this->assertArrayHasKey('startThreadFromMessage', $this->description['operations']['channel']);
+        $this->assertArrayHasKey('startThreadInForumOrMediaChannel', $this->description['operations']['channel']);
         $this->assertArrayHasKey('createInteractionResponse', $this->description['operations']['interaction']);
         $this->assertArrayHasKey('getGlobalApplicationCommands', $this->description['operations']['application-command']);
+    }
+
+    public function testStartThreadInForumOrMediaChannelParameters()
+    {
+        $operation = $this->description['operations']['channel']['startThreadInForumOrMediaChannel'];
+
+        $this->assertEquals('/channels/{channel.id}/threads', $operation['url']);
+        $this->assertArrayHasKey('message', $operation['parameters']);
+        $this->assertTrue($operation['parameters']['message']['required']);
+        $this->assertEquals('array', $operation['parameters']['message']['type']);
+        $this->assertArrayHasKey('applied_tags', $operation['parameters']);
+        $this->assertArrayHasKey('flags', $operation['parameters']);
     }
 
     /**
