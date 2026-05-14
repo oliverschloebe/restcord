@@ -1,7 +1,7 @@
 <?php
 
 /*
- * Copyright 2017 Aaron Scherer
+ * Copyright 2026 Oliver Schlöbe
  *
  * This source file is subject to the license that is bundled
  * with this source code in the file LICENSE
@@ -18,7 +18,7 @@ use RestCord\Constants;
 use RestCord\Model\Guild\Guild;
 
 /**
- * IconTraitTest Class
+ * IconTraitTest Class.
  */
 class IconTraitTest extends TestCase
 {
