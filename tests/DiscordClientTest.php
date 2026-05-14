@@ -1,7 +1,7 @@
 <?php
 
 /*
- * Copyright 2017 Aaron Scherer
+ * Copyright 2026 Oliver Schlöbe
  *
  * This source file is subject to the license that is bundled
  * with this source code in the file LICENSE
@@ -21,7 +21,7 @@ use RestCord\DiscordClient;
 use Symfony\Component\OptionsResolver\Exception\InvalidOptionsException;
 
 /**
- * DiscordClientTest Class
+ * DiscordClientTest Class.
  */
 class DiscordClientTest extends TestCase
 {
