@@ -82,7 +82,7 @@ class TestableRateLimiter extends RateLimiter
 }
 
 /**
- * RateLimiterTest Class
+ * RateLimiterTest Class.
  */
 class RateLimiterTest extends TestCase
 {
