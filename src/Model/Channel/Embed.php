@@ -175,7 +175,7 @@ class Embed {
 	/**
 	 * @param array $content
 	 */
-	public function __construct(array $content = null) {
+	public function __construct(?array $content = null) {
 		if (null === $content) {
 		    return;
 		}
