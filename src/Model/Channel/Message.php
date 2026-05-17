@@ -110,7 +110,7 @@ class Message {
 	public $icon;
 
 	/**
-	 * id of the application
+	 * id of the message
 	 *
 	 * @var int
 	 */
