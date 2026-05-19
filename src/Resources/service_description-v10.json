@@ -1279,6 +1279,31 @@
                         "type": "snowflake",
                         "location": "uri",
                         "required": true
+                    },
+                    "user_id": {
+                        "type": "snowflake",
+                        "location": "query",
+                        "required": false
+                    },
+                    "action_type": {
+                        "type": "integer",
+                        "location": "query",
+                        "required": false
+                    },
+                    "before": {
+                        "type": "snowflake",
+                        "location": "query",
+                        "required": false
+                    },
+                    "after": {
+                        "type": "snowflake",
+                        "location": "query",
+                        "required": false
+                    },
+                    "limit": {
+                        "type": "integer",
+                        "location": "query",
+                        "required": false
                     }
                 },
                 "parametersArray": false
